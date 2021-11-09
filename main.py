@@ -1,8 +1,17 @@
 # 尝试用echarts和qtwebengine来做一个供应商审核spyder chart显示GUI
 # reference https://zetcode.com/all/#pyqt
-# 项目文件导打包，导出exe都没问题了，放在本地运行ok，
-# 但是尝试放到share folder中无法显示网页，cmd报是因为Qtwebengine.exe在sandbox中不允许运行，
-# 这种案例网上太少了，解决办法涉及到公司IT和
+# pyinstaller == 4.6
+# pyqt5 == 5.15.4
+# pyqtwebengine == 5.15.5
+# pyecharts == 1.9.0
+
+
+"""
+项目文件导打包，导出exe都没问题了，放在本地运行ok，
+但是尝试放到share folder中无法显示网页，cmd报是因为Qtwebengine.exe在sandbox中不允许运行，
+这种案例网上太少了，解决办法涉及到公司IT和数字签名，所以可见这种使用webengine的方案并不太适合
+这种运行环境，建议使用其他的库，而且浏览器会引入更多的底层安全权限问题
+"""
 
 # from PyQt5.QtCore import *
 from PyQt5.QtWidgets import QWidget, QApplication, QPushButton, QVBoxLayout
